@@ -7,29 +7,39 @@ print "-----------------------------"
 nums = input_nums()
 # 1. What is the sum of all the numbers in nums?
 
-print "1.", __
+
+total=0
+for num in nums:
+    total+=num
+print "1.",total
+
 
 
 # 2. Print every even number in nums
-print "2. even numbers"
+for num in nums:
+    if num % 2 == 0:
+        print "2. Even numbers: ",num
+    
+
 
 #CODE GOES HERE
 
 
 # 3. Does nums only contain even numbers? 
-only_even = False
 
-#CODE GOES HERE
-
-print "3.",
-if only_even:
-    print "only even"
+some_odd = False
+for num in nums:
+    if num % 2 != 0:
+        some_odd = True
+if some_odd == True:
+    print "3. Some odd."
 else:
-    print "some odd"
+    print "3. All even."
 
 
 # 4. Generate a list every odd number less than 100. Hint: use range()
-print "4.", __
+odds = []
 
-# 5. [ADVANCED]  Multiply each element in nums by its index
-print "5.", __
+for i in range (1,100,2):
+    odds.append(i)
+print "4. " odds 

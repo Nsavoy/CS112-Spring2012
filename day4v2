@@ -1,0 +1,11 @@
+#!/usr/bin/env python
+
+"""
+if statements
+"""
+
+name_in=raw_input("enter a name: ")
+if name_in == "Paul":
+    print "You are cool."
+if name_in != "Paul":
+    print "You, you are not so cool."

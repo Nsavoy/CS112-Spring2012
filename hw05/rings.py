@@ -4,14 +4,14 @@ import pygame
 from pygame.locals import *
 
 ## COLORS
-BLUE = 0, 133, 199
-RED = 223, 0, 36
-YELLOW = 244, 195, 0
-GREEN = 0, 159, 61
-BLACK = 0, 0, 0
-WHITE = 255, 255, 255
+blu = 0, 133, 199
+red = 223, 0, 36
+yel = 244, 195, 0
+gre = 0, 159, 61
+bla = 0, 0, 0
+whi = 255, 255, 255
 
-THICKNESS = 20
+thick = 20
 
 
 ## MAIN
@@ -20,7 +20,9 @@ screen = pygame.display.set_mode((800, 388))
 pygame.display.set_caption("Olympic Rings   [press ESC to quit]")
 
 ## Draw
-screen.fill(WHITE)
+screen.fill(whi)
+
+pygame.draw.circle(screen, blu, (150, 259), 30, width=thick,)
 
 #################################
 ##  DRAW OLYPIC RINGS HERE

@@ -3,34 +3,41 @@
 # Create a greeter
 #    create a greeter that says hello to someone in all lower case.  Use print statements
 #
-#  ex:
-#   >>> greeter("paul")
-#   hello, paul
-#   >>> greeter(3)
-#   hello, 3
-#   >>> greeter("WORLD")
-#   hello, world
 
-# def greeter(name):
+
+
+def greeter(name): #gets an input for greeter
+    name = str(name) #makes sure that an int will pass through the function w/o barfing
+    print "hello,", name.lower() #lowercases every letter.
+
+
+
+def box(w, h):
+
+#checks the parameters to make sure every value is valid.
+    if w <= 0 or h <= 0 or type(w) != int or type(h) != int:
+        print "Error: Invalid Dimensions"
+        return #goes back to start
+#establishes the variables top and sides.
+    if w == 1:
+        top = "+"
+        sides = "|"
+    else:
+        top = "+" + "-"*(w-2) + "+"
+        sides = "|" + " "*(w-2) + "|"
+    print top
+    for i in range(h-2):
+        print sides
+    if h > 1:
+        print top
+
+
 
 
 # Draw a box
 #    given a width and a height, draw a box in the terminal.  Use print statements
 #
-#  ex:
-#    >>> box("apples", -3)
-#    Error: Invalid Dimensions
-#    >>> box(1,1)
-#    +
-#    >>> box(4,2)
-#    +--+
-#    +--+
-#    >>> box(3,3)
-#    +-+
-#    | |
-#    +-+
-
-# def box(w,h):
+#  
 
 
 
@@ -51,4 +58,3 @@
 #       | |
 
 # def tree()
-

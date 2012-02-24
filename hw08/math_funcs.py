@@ -10,6 +10,11 @@ import math
 #      5
 
 # def distance(a, b):
+def distance(a, b):
+    ax, ay = a
+    bx, by = b
+    d = math.sqrt((bx - ax)**2 + (by - ay)**2)
+    return d
 
 
 # ADVANCED

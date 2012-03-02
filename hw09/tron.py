@@ -31,8 +31,6 @@ pos1 = [(20, 15)]
 pos2 = [(60, 40)]
 
 
-##############/bin/bash: :wq: command not found
-
 def move_player(pos, direct):
     newPos = (pos[0] + direct[0], pos[1] + direct[1])
     return newPos
@@ -56,6 +54,8 @@ screen = pygame.display.set_mode((width * tile, height * tile)) #Voodoo.
 done = False
 game = False
 clock = pygame.time.Clock()
+
+
 while not done:
     #  input
     for event in pygame.event.get():#more quitting rules.

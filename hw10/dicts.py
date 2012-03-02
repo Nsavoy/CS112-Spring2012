@@ -16,8 +16,12 @@ manipulate python dictionaries.
 
 def freq(data):
     "calculate the frequency for each value in data"
-
-
+    counts = {}
+    for value in data:
+        if not value in counts:
+            counts[value] = 0 
+        counts[value] += 1
+    return counts
 
 # 2. Movie Reviews
 #      Write two functions to help with scoring a movie.
@@ -41,11 +45,19 @@ movies = {}
 
 def score(title, value):
     "register the score for a given movie out of 5"
+    if not title in movies:
+        movies[title] = []
+    movies[title].append(value)
 
 
 def avg_score(title):
     "return the average score for a given movie"
-
+    total = float(0)
+    if not title in movies:
+        return None
+    for value in movies[title]:
+        total += value
+    return total / len(movies[title])
 
 
 # 3. parse_csv (Advanced)

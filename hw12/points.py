@@ -32,26 +32,22 @@
 #
 
 
-# Advanced Section:
-# ---------------------------------------
-# Add the following function:
-#     slope(self, other):
-#         calculate the slope between two points
-#
-#     extrapolate(self, slope, distance):
-#         returns a point along the line defined by slope
-#         a given distance away
-#
-# Also, add the following special python methods:
-#     __eq__(self, other):
-#         checks if other is a Point and is equal to self
-#
-#     __str__(self):
-#         returns a string representation of the point 
-#     
-#     >>> print Point(3,4)
-#     (3,4)
-#     >>> a = Point(1,2)
-#     >>> b = Point(1,2)
-#     >>> print a == b
-#     True
+import math
+
+class Point(object):
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+
+    def distance(self, other):
+        d = math.sqrt((other.x - self.x)**2 + (other.y - self.y)**2)
+        return d
+
+    def move(self, x, y):
+        self.x = x
+        self.y = y
+
+    def translate(self, x, y):
+        self.x += x
+        self.y += y
